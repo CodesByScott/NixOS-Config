@@ -10,6 +10,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Hostname
   networking.hostName = "Poopy";
 
   # Enable networking
@@ -36,9 +37,8 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  # Display Manager.
+  services.xserver.displayManager.ly.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -81,11 +81,19 @@
   # Install firefox.
   programs.firefox.enable = true;
 
+  # Hyprland
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
+  # Appimage
+  programs.appimage.enable = true;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
      vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
      wget
@@ -96,12 +104,55 @@
      gh
      discord
      pkgs.home-manager
+     htop
+     grim
+     gvfs
+     kitty
+     nitch
+     rustc
+     cargo
+     slurp
+     mtpfs
+     jmtpfs
+     libmtp
+     clippy
+     rustfmt
+     usbutils
+     xwayland
+     jellyfin
+     playerctl
+     wlr-randr
+     libnotify
+     xfce.thunar
+     wf-recorder
+     pavucontrol
+     imagemagick
+     xfce.tumbler
+     wl-clipboard
+     jellyfin-web
+     android-tools
+     qt6.qt5compat
+     brightnessctl
+     rust-analyzer
+     jellyfin-ffmpeg
+     jellyfin-desktop
+     qt6.qtimageformats
+     xfce.thunar-volman
+     xfce.thunar-archive-plugin
+    (python3.withPackages (ps:
+      with ps; [
+        dbus-python
+        pygobject3
+        flask
+        requests
+      ]))
   ];
 
-  # List services that you want to enable:
-  
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  # Fonts
+  fonts.packages = with pkgs; [nerd-fonts.jetbrains-mono];
 
+  # List services that you want to enable:
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   system.stateVersion = "25.11";
 
 }
