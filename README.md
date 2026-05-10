@@ -3,6 +3,8 @@ My NixOS configuration with flake and home manager for hyprland.
 
 It'll slowly grow and change with time.
 
+Make sure to enable flakes with nix.settings.experimental-features = [ "nix-command" "flakes" ]; in your /etc/nixos/configuration.nix first and run sudo nixos-rebuild switch then follow the steps below.
+
 To use either use git clone https://github.com/CodesByScott/NixOS-Config.git ~/Directory of your choice or simply download the zip file and move all files to a directory in your home path except for the config folder.
 
 Make sure to change username and host name in all .nix files to match your own. As all the files match my user and host name.
