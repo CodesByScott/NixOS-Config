@@ -11,7 +11,7 @@ To use git clone https://github.com/CodesByScott/NixOS-Config.git ~/nixos-dotfil
 
 Make sure to change username and host name in all .nix files to match your own. As all the files match my user and host name.
 
-Don't forget to change settings in configuration.nix if you are using nivida gup as I have amd.
+Don't forget to change settings in configuration.nix if you are using nivida gup as I have amd under xservices video drivers delete amd and change it to nivida and uncomment the nivida section.
 
 After you have done all of that and since all computers have diffrent hardware-configuration.nix I have it pointing to /etc/nixos/hardware.nix in the configuration.nix make sure to use the --impure flag when running the command nixos-rebuild switch flake ~/nixosdotfiles#nixos --impure
 
