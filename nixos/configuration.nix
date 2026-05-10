@@ -46,9 +46,6 @@
     variant = "";
   };
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -74,7 +71,7 @@
     description = "FrogginRamen";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-    #  thunderbird
+      tree
     ];
   };
 
@@ -93,9 +90,9 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
+  # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
-     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+     vim
      wget
      git
      fastfetch
@@ -139,13 +136,13 @@
      qt6.qtimageformats
      xfce.thunar-volman
      xfce.thunar-archive-plugin
-    (python3.withPackages (ps:
-      with ps; [
-        dbus-python
-        pygobject3
-        flask
-        requests
-      ]))
+     (python3.withPackages (ps:
+       with ps; [
+         dbus-python
+         pygobject3
+         flask
+         requests
+       ]))
   ];
 
   # Fonts
