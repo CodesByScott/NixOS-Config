@@ -18,22 +18,55 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
-    # # Adds the 'hello' command to your environment. It prints a friendly
-    # # "Hello, world!" when run.
-    # pkgs.hello
-
-    # # It is sometimes useful to fine-tune packages, for example, by applying
-    # # overrides. You can do that directly here, just don't forget the
-    # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-    # # fonts?
-    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
-
-    # # You can also create simple shell scripts directly inside your
-    # # configuration. For example, this adds a command 'my-hello' to your
-    # # environment:
-    # (pkgs.writeShellScriptBin "my-hello" ''
-    #   echo "Hello, ${config.home.username}!"
-    # '')
+     jq
+    zip
+    nil
+    gcc
+    eza
+    fzf
+    imv
+    mpd
+    htop
+    yazi
+    tmux
+    swww
+    rmpc
+    vips
+    cava
+    pywal
+    unzip
+    neovim
+    nodejs
+    evince
+    upower
+    figlet
+    ffmpeg
+    zoxide
+    stylua
+    yt-dlp
+    ripgrep
+    cmatrix
+    adw-gtk3
+    cliphist
+    hyprlock
+    hypridle
+    fastfetch
+    gammastep
+    playerctl
+    libnotify
+    alejandra
+    prettierd
+    librewolf
+    libreoffice
+    imagemagick
+    nixpkgs-fmt
+    brightnessctl
+    qt6.qt5compat
+    video-downloader
+    transmission_4-gtk
+    qt6.qtimageformats
+    nodePackages.prettier
+    quickshell.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
