@@ -75,8 +75,8 @@ in {
     enable = true;
     settings = {
       user = {
-        name = "robbsbro69";
-        email = "robbsbro369@proton.me";
+        name = "codesbyscott";
+        email = "scottcreatescode@gmail.com";
       };
       init.defaultBranch = "main";
     };
