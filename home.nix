@@ -177,6 +177,7 @@ in {
     imv
     mpd
     htop
+    vscode-fhs
     yazi
     tmux
     swww
