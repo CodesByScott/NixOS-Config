@@ -44,7 +44,7 @@
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            users.frogginramen= import ./home.nix;
+            users.alpha = import ./home.nix;
             extraSpecialArgs = {
               inherit zen-browser quickshell spicetify-nix;
               pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};

@@ -5,7 +5,7 @@
   ...
 }: {
   imports = [
-    /etc/nixos/hardware-configuration.nix
+    ./hardware-configuration.nix
   ];
   nixpkgs.config.allowUnfree = true;
 
@@ -20,6 +20,10 @@
   security.rtkit.enable = true;
   security.pam.services.hyprlock = {};
 
+  hardware.nvidia = {
+    open = false;
+    modesetting.enable = true;
+  };
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
@@ -42,7 +46,7 @@
     extraPortals = [pkgs.xdg-desktop-portal-gtk];
   };
 
-  networking.hostName = "Poopy";
+  networking.hostName = "nixos";
   networking.networkmanager = {
     enable = true;
     dns = "none";
@@ -52,12 +56,12 @@
     "8.8.8.8"
     "one.one.one.one"
   ];
-  time.timeZone = "America/New_York";
+  time.timeZone = "Asia/Kathmandu";
 
   services.jellyfin = {
     enable = true;
     openFirewall = true;
-    user = "frogginramen";
+    user = "alpha";
     group = "users";
   };
 
@@ -65,7 +69,7 @@
     enable = true;
     autoRepeatDelay = 200;
     autoRepeatInterval = 35;
-    videoDrivers = ["amdgpu"];
+    videoDrivers = ["amdgpu" "nvidia"];
   };
   services.blueman.enable = true;
   services.displayManager.ly.enable = true;
@@ -86,7 +90,7 @@
     ];
   };
 
-  users.users.frogginramen = {
+  users.users.alpha = {
     isNormalUser = true;
     extraGroups = ["wheel" "vboxusers"];
     packages = with pkgs; [
@@ -151,6 +155,12 @@
   ];
 
   fonts.packages = with pkgs; [nerd-fonts.jetbrains-mono];
+
+  fileSystems."/mnt/ssd" = {
+    device = "/dev/disk/by-uuid/61764028-e6aa-4cd3-8bc5-44ad25df22e0";
+    fsType = "ext4";
+    options = ["defaults" "nofail"];
+  };
 
   nix.gc = {
     automatic = true;

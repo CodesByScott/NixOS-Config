@@ -7,7 +7,7 @@
   ...
 }: let
   spicePkgs = spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
-  dotfiles = "${config.home.homeDirectory}~/frogginramen/.config";
+  dotfiles = "${config.home.homeDirectory}/nixos-dotfiles/config";
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
   configs = {
     wal = "wal";
@@ -52,8 +52,8 @@ in {
     systemd.enable = false;
   };
 
-  home.username = "frogginramen";
-  home.homeDirectory = "/home/frogginramen";
+  home.username = "alpha";
+  home.homeDirectory = "/home/alpha";
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
@@ -75,8 +75,8 @@ in {
     enable = true;
     settings = {
       user = {
-        name = "codesbyscott";
-        email = "scottcreatescode@gmail.com";
+        name = "robbsbro69";
+        email = "robbsbro369@proton.me";
       };
       init.defaultBranch = "main";
     };
@@ -87,8 +87,8 @@ in {
     enable = true;
     shellAliases = {
       btw = "echo i use nixos, btw";
-      nrs = "sudo nixos-rebuild switch --flake ~/Flake/#Poopy";
-      nuprs = "nix flake update && sudo nixos-rebuild switch --flake ~/Flake/#Poopy";
+      nrs = "sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nixos";
+      nuprs = "nix flake update && sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nixos";
       gnrs = "git add . && git commit -m \"update\" && nrs";
       ls = "eza --icons";
       ff = "fastfetch --logo \"$(find ~/.config/fastfetch/logo -type f | shuf -n 1)\" --logo-type kitty --logo-height 18";
