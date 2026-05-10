@@ -112,6 +112,7 @@
     git
     wget
     htop
+    vscode-fhs
     grim
     gvfs
     kitty
