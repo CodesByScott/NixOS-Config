@@ -3,6 +3,8 @@ My NixOS configuration with flake and home manager for hyprland.
 
 It'll slowly grow and change with time.
 
+To use either use git clone https://github.com/CodesByScott/NixOS-Config.git ~/Directory of your choice or simply download the zip file and move all files to a directory in your home path except for the config folder.
+
 Since all computers have diffrent hardware-configuration.nix I have it pointing to /etc/nixos/hardware.nix in the configuration.nix make sure to use the --impure flag when running the command nixos-rebuild switch flake ~/directoryofflakelocation/#hostname --impure
 
 Make sure to change username and host name in all .nix files to match your own. As all the files match my user and host name.
