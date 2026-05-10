@@ -52,8 +52,8 @@ in {
     systemd.enable = false;
   };
 
-  home.username = "alpha";
-  home.homeDirectory = "/home/alpha";
+  home.username = "frogginramen";
+  home.homeDirectory = "/home/frogginramen";
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
@@ -87,8 +87,8 @@ in {
     enable = true;
     shellAliases = {
       btw = "echo i use nixos, btw";
-      nrs = "sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nixos";
-      nuprs = "nix flake update && sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nixos";
+      nrs = "sudo nixos-rebuild switch --flake ~/nixos-dotfiles/#Poopy";
+      nuprs = "nix flake update && sudo nixos-rebuild switch --flake ~/nixos-dotfiles/#Poopy";
       gnrs = "git add . && git commit -m \"update\" && nrs";
       ls = "eza --icons";
       ff = "fastfetch --logo \"$(find ~/.config/fastfetch/logo -type f | shuf -n 1)\" --logo-type kitty --logo-height 18";
