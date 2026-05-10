@@ -20,10 +20,11 @@
   security.rtkit.enable = true;
   security.pam.services.hyprlock = {};
 
-  hardware.nvidia = {
-    open = false;
-    modesetting.enable = true;
-  };
+  # hardware.nvidia = {
+  # open = false;
+  # modesetting.enable = true;
+  # };
+ 
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
