@@ -17,6 +17,6 @@ Don't forget to change settings in configuration.nix if you are using nivida gup
 
 lastly go to config/hypr/hyprland/execs.conf and edit all the paths to your username before funning the command below.
 
-After you have done all of that and since all computers have diffrent hardware-configuration.nix I have it pointing to /etc/nixos/hardware.nix in the configuration.nix make sure to use the --impure flag when running the command nixos-rebuild switch flake ~/nixosdotfiles#nixos --impure
+After you have done all of that and since all computers have diffrent hardware-configuration.nix I have it pointing to /etc/nixos/hardware.nix in the configuration.nix make sure to use the --impure flag when running the command nixos-rebuild switch --flake ~/nixos-dotfiles#nixos --impure
 
 That should be all and you should be able to use it just fine without issues as long as you have followed the steps and changed everything.
