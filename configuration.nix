@@ -62,7 +62,7 @@
   services.jellyfin = {
     enable = true;
     openFirewall = true;
-    user = "alpha";
+    user = "frogginramen";
     group = "users";
   };
 
