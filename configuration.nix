@@ -113,6 +113,7 @@
     wget
     htop
     vscode-fhs
+    discord
     grim
     gvfs
     kitty
