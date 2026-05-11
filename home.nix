@@ -87,8 +87,8 @@ in {
     enable = true;
     shellAliases = {
       btw = "echo i use nixos, btw";
-      nrs = "sudo nixos-rebuild switch --flake ~/nixos-dotfiles/#Poopy";
-      nuprs = "nix flake update && sudo nixos-rebuild switch --flake ~/nixos-dotfiles/#Poopy";
+      nrs = "sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nixos --impure";
+      nuprs = "nix flake update && sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nixos --impure";
       gnrs = "git add . && git commit -m \"update\" && nrs";
       ls = "eza --icons";
       ff = "fastfetch --logo \"$(find ~/.config/fastfetch/logo -type f | shuf -n 1)\" --logo-type kitty --logo-height 18";
