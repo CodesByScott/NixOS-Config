@@ -35,6 +35,7 @@
     xwayland.enable = true;
   };
   programs.appimage.enable = true;
+  programs.steam.enable = true;
 
   virtualisation.virtualbox.host = {
     enable = true;
