@@ -1,7 +1,5 @@
 # NixOS-Config
-My NixOS configuration with flake and home manager for hyprland. Inspired by robbsbro69's nixos configuration but with more tweaks to suit my systems and so I don't have to edit files when installing onto a new system if intrested I recommed cheking out their repo over at https://github.com/robbsbro69/nixos/tree/main
-
-They probably have clearer instructions than I do and better documentation as I am still fairly new to NixOS and am still learning.
+My NixOS configuration with flake and home manager for hyprland.
 
 It'll slowly grow and change with time.
 
