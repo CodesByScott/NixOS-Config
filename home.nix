@@ -178,6 +178,7 @@ in {
     mpd
     htop
     vscode-fhs
+    discord
     yazi
     tmux
     swww
