@@ -1,6 +1,8 @@
 # NixOS-Config
 My NixOS configuration with flake and home manager for hyprland.
 
+Taken and inspired from robbsbro69's config you can check it out here https://github.com/robbsbro69/nixos
+
 It'll slowly grow and change with time.
 
 Make sure to enable flakes with nix.settings.experimental-features = [ "nix-command" "flakes" ]; in your /etc/nixos/configuration.nix first and run sudo nixos-rebuild switch then follow the steps below.
