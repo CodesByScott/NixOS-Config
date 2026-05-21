@@ -1,7 +1,5 @@
 # NixOS-Config
 
-Since Hyprland has moved from the regular configuration to .lua I will be changing this whole repo once I get everything set up making it more streamlined and simplified I will also be ditching home manager as I see no use for it as I am the only user on my computer.
-
 My NixOS configuration with flake and home manager for hyprland.
 
 Taken and inspired from robbsbro69's config you can check it out here https://github.com/robbsbro69/nixos
