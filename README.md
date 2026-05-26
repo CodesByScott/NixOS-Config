@@ -2,7 +2,7 @@
 
 My NixOS configuration with flake and home manager for hyprland.
 
-Will be changing a lot and getting rid of home manager now that I see no use for it with hyprland changing the configuration to .lua changes will be happening after NixOS 26.05 comes out in the following weeks.
+Will be changing a lot and getting rid of home manager now that I see no use for it since I am the only user on my computer I understand why home manager is useful for people but for me its just an extra and unnecessary step in my personal configuration. In doing so it'll be a lot less as well for other people to change who may want to try my configuration. With hyprland changing the configuration to .lua changes will be happening after NixOS 26.05 comes out in the following weeks.
 
 Taken and inspired from robbsbro69's config you can check it out here https://github.com/robbsbro69/nixos
 
