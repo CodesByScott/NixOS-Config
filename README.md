@@ -1,25 +1,17 @@
 # NixOS-Config
 
-My NixOS configuration with flake and home manager for hyprland.
+My NixOS config for Hyprland and Noctalia.
 
-Will be changing a lot and getting rid of home manager now that I see no use for it since I am the only user on my computer I understand why home manager is useful for people but for me its just an extra and unnecessary step in my personal configuration. In doing so it'll be a lot less as well for other people to change who may want to try my configuration. With hyprland changing the configuration to .lua changes will be happening after NixOS 26.05 comes out in the following weeks.
+Download the .zip unzip it and make a directory in your home directory.
 
-Taken and inspired from robbsbro69's config you can check it out here https://github.com/robbsbro69/nixos
+After doing so go into the configuration.nix and change hostname and username to match yours after doing that do the same in the flke.nix.
 
-It'll slowly grow and change with time.
+Move to Config folder contents to your .config directory then delete it out of the directory with the flake.
 
-Make sure to enable flakes with nix.settings.experimental-features = [ "nix-command" "flakes" ]; in your /etc/nixos/configuration.nix first and run sudo nixos-rebuild switch then follow the steps below.
+Finally just run sudo nixos-rebuild switch --flake ~/Nameofyourdirectory#Systemname --impure.
 
-To use git clone https://github.com/CodesByScott/NixOS-Config.git ~/nixos-dotfiles of this repo.
- 
- Then symlink with ln -sf ~/nixos-dotfiles ~/.config to your config path so it'll work.
+Make sure to use the --impure flag for it to work since the configuration is pointing to the /etc/nixos/hardware-configuration.nix since eacg systems hardware is different I found it easier to do it that way.
 
-Make sure to change username and host name in all .nix files to match your own. As all the files match my user and host name.
+I didn't include a noctalia config so you can make it your own this is a super basic config just to get things installed and going the rest is up to you if you want to use the gtk themes I use you can look here https://github.com/CodesByScott/Arch-Config and get the Icons pack then I also left the link for the theme I use for nautilus.
 
-Don't forget to change settings in configuration.nix if you are using nivida gup as I have amd under xservices video drivers delete amd and change it to nivida and uncomment the nivida section.
-
-lastly go to config/hypr/hyprland/execs.conf and edit all the paths to your username before funning the command below.
-
-After you have done all of that and since all computers have diffrent hardware-configuration.nix I have it pointing to /etc/nixos/hardware.nix in the configuration.nix make sure to use the --impure flag like so when running the command nixos-rebuild switch --flake ~/nixos-dotfiles#nixos --impure or else it'll fail to run.
-
-That should be all and you should be able to use it just fine without issues as long as you have followed the steps and changed everything.
+That should be it and it should work for you as well I've tested this on multiple machines and it has worked on them.
