@@ -1,0 +1,8 @@
+background_opacity 0.6
+dynamic_background_opacity yes
+
+
+# BEGIN_KITTY_THEME
+# Kaolin Ocean
+include current-theme.conf
+# END_KITTY_THEME
